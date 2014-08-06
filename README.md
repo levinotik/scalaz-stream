@@ -36,7 +36,6 @@ val converter: Task[Unit] =
      intersperse("\n").
      pipe(text.utf8Encode).
      to(io.fileChunkW("testdata/celsius.txt")).
-     run
 
 // at the end of the universe...
 val u: Unit = converter.run
